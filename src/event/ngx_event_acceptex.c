@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows 平台 AcceptEx 异步接受实现。
+ * - 利用 AcceptEx 在 IOCP 上批量投递接受请求
+ * - 在完成回调中更新 SO_UPDATE_ACCEPT_CONTEXT 并解析地址
+ * - 复用 Nginx 的连接数组，在 s/4 位置建立 ngx_connection_t
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

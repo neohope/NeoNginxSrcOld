@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 事件管道（event pipe），在 upstream 与客户端之间转发数据。
+ * - 负责在上游和下游之间搬运缓冲链，可选写入临时文件做缓存
+ * - 处理 preread、限速、缓存可写性等复杂边界条件
+ * - 广泛用于 proxy/fastcgi 等需要反向代理的模块
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

@@ -1,7 +1,10 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows IOCP 事件模块。
+ * - 使用 CreateIoCompletionPort 建立完成端口并投递重叠 I/O
+ * - 将 ngx_os_io 切换为基于 WSARecv/WSASend 的重叠实现
+ * - 通过 iocp_threads/post_acceptex/acceptex_read 等指令调优
  */
+
 
 
 #include <ngx_config.h>

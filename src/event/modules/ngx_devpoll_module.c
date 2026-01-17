@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * /dev/poll 事件模块（Solaris）。
+ * - 通过写 /dev/poll 设备提交监听 fd 变更
+ * - 使用 dp_poll 读取就绪事件列表
+ * - 支持 devpoll_changes/devpoll_events 参数调整批处理大小
  */
 
 

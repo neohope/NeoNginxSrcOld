@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx posted 事件队列处理。
+ * - 通过 ngx_posted_events 链表延迟调度部分事件
+ * - 单进程模式下简单从队列取出并调用 event_handler
+ * - 线程模式下配合互斥锁与条件变量唤醒空闲工作线程
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * rtsig 实时信号事件模块（早期 Linux）。
+ * - 通过实时信号通知 fd 就绪，减少轮询开销
+ * - 在信号队列溢出时回退到 poll 模块处理 overflow
+ * - 支持多个与溢出相关的配置指令：rtsig_overflow_* 系列
  */
 
 

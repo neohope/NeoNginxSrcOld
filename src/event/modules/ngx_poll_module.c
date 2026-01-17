@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * poll() 事件模块。
+ * - 使用 poll 系统调用监控大量 fd 的读写就绪
+ * - 为每个连接维护 pollfd 数组位置，实现增删事件
+ * - 在不支持 epoll/kqueue 的 Unix 平台上作为备选实现
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

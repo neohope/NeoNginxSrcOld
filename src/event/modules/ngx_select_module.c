@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * select() 事件模块。
+ * - 使用标准 select 系统调用驱动读写事件
+ * - 维护 master/work fd_set，并为每个 fd 建立索引表
+ * - 主要用于不支持更高级多路复用接口的平台或调试
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

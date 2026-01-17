@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows IOCP ConnectEx 辅助逻辑（草稿代码，未完整实现）。
+ * - 维护 pending_connects 队列与工作线程等待事件
+ * - 为每个异步 connect 创建 WSA 事件并在 io 线程中轮询
+ * - 早期实验性代码，0.1.0 中并未真正启用
  */
 
 

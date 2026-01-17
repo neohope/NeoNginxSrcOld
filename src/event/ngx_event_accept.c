@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 连接接受（accept）处理。
+ * - 在监听套接字上循环调用 accept() 获取新连接
+ * - 为新连接分配内存池、日志上下文和事件结构
+ * - 结合 accept_mutex、多路复用模块控制并发接受速率
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

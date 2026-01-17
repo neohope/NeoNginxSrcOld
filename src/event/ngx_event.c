@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 事件子系统与 event_core 模块。
+ * - 提供统一的事件抽象与调度接口（ngx_event_actions）
+ * - 从配置中选择具体事件驱动模块（select/epoll/kqueue 等）
+ * - 维护连接数、accept_mutex、统计计数等全局事件状态
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

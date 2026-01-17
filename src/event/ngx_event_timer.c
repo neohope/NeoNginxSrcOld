@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 事件定时器管理。
+ * - 通过红黑树维护所有定时事件，key 为到期时间片
+ * - ngx_event_find_timer 找到最近到期时间用于 poll/epoll 超时
+ * - ngx_event_expire_timers 扫描并触发已到期的事件处理函数
  */
 
 

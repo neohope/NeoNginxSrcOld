@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * epoll 事件模块（Linux）。
+ * - 使用 epoll_create/epoll_ctl/epoll_wait 提供高性能 I/O 复用
+ * - 支持边缘触发和 EPOLLONESHOT，配合 Nginx 的 oneshot 语义
+ * - 通过 epoll_events 指令配置单次 epoll_wait 返回的最大事件数
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

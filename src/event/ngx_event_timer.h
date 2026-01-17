@@ -1,9 +1,4 @@
 
-/*
- * Copyright (C) Igor Sysoev
- */
-
-
 #ifndef _NGX_EVENT_TIMER_H_INCLUDED_
 #define _NGX_EVENT_TIMER_H_INCLUDED_
 

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 与 OpenSSL 的事件层集成。
+ * - 初始化 OpenSSL 库并为连接创建 SSL 会话
+ * - 封装 SSL_read/SSL_write，为事件循环提供非阻塞接口
+ * - 通过内部 16K 缓冲区实现 SSL 发送链的聚合与限速
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

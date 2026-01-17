@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 事件级别 busy lock 控制。
+ * - 限制同一时间内并发处理的请求数量（bl->max_busy）
+ * - 支持可缓存请求的去重，同一 key 的请求可以等待前一个结果
+ * - 通过定时器和 posted events 在锁释放时唤醒等待请求
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

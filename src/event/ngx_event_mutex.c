@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 事件互斥量（event mutex）。
+ * - 为 accept_mutex 等场景提供轻量级互斥
+ * - 支持带超时的加锁，请求失败时将事件排队等待
+ * - 解锁时把等待事件挂到 posted 队列，交由事件循环调度
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

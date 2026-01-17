@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * 异步 I/O 事件模块（aio）。
+ * - 把 ngx_os_io 的 read/write 实现替换为基于 AIO 的版本
+ * - 在支持 kqueue 的系统上复用 kqueue 来驱动 AIO 完成事件
+ * - 目前主要用于兼容 FreeBSD 的内核异步文件 I/O 能力
  */
 
 

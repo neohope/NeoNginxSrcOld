@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * kqueue 事件模块（FreeBSD 等 BSD 平台）。
+ * - 使用 kqueue/kevent 管理大量文件描述符的边缘触发事件
+ * - 通过 change_list/event_list 批量提交和获取事件
+ * - 支持配置 kqueue_changes/kqueue_events 调整批大小
  */
 
 
