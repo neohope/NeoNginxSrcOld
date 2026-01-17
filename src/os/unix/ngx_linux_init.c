@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Linux 平台初始化与 sendfile 封装。
+ * - 通过 sysctl 读取内核类型/版本以及 KERN_RTSIGMAX 等参数
+ * - 选择使用 linux sendfile 或退化为 writev_chain
+ * - 填充 ngx_os_io，并调用 ngx_posix_init 完成通用 POSIX 初始化
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

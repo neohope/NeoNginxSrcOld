@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * POSIX pthread 线程与互斥量封装。
+ * - 基于 pthread_create/pthread_attr_* 管理工作线程及栈大小
+ * - 提供 ngx_mutex_t/ngx_cond_t 等同步原语的简单包装
+ * - 通过 ngx_threaded 标记整个进程是否处于多线程模式
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

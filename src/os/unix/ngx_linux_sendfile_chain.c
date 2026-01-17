@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Linux 平台 sendfile 链式发送实现。
+ * - 使用 sendfile/sendfile64 将文件数据直接从内核缓冲区发往 socket
+ * - 结合 iovec 头部缓冲，实现“头+文件”零拷贝发送
+ * - 处理 2G 边界、EINTR/EAGAIN 等细节并更新连接已发送字节数
  */
 
 

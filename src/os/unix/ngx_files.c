@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * UNIX 平台文件 IO 封装。
+ * - 对 read/pread、write/pwrite、lseek 进行统一封装并维护偏移量
+ * - 负责记录 file->offset/sys_offset，便于顺序/随机读写
+ * - 所有核心模块通过这里完成文件读写，统一错误日志格式
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

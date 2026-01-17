@@ -1,9 +1,4 @@
 
-/*
- * Copyright (C) Igor Sysoev
- */
-
-
 #ifndef _NGX_SOCKET_H_INCLUDED_
 #define _NGX_SOCKET_H_INCLUDED_
 

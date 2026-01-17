@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * AIO 单次异步写实现。
+ * - 为连接写事件填充 aiocb 并调用 aio_write 提交请求
+ * - 使用 aio_error/aio_return 判断完成、错误或仍在进行
+ * - 在 NGX_AGAIN 场景下保持事件挂起，由事件循环继续驱动
  */
 
 

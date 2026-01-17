@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * AIO 异步读链封装。
+ * - 将链表中的相邻缓冲区合并成一次 aio_read 调用
+ * - 读取到 0 时标记 pending_eof，并维护 ready/eof 状态
+ * - 根据返回值在 NGX_AGAIN/NGX_ERROR/正常之间切换
  */
 
 

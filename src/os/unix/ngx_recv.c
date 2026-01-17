@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Unix 平台接收数据封装。
+ * 实现了 ngx_unix_recv，对 recv 系统调用进行包装，
+ * 并集成了 kqueue 事件通知机制 (检测 EOF 和错误)，处理 EAGAIN/EINTR 等情况。
  */
 
 

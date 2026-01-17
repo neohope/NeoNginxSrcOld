@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * FreeBSD 基于 rfork 的用户态线程实现。
+ * - 使用 rfork(RFPROC|RFTHREAD|RFMEM) 创建轻量线程并共享地址空间
+ * - 通过栈区间计算当前线程 id，实现简单 TLS/errno 替代
+ * - 结合原子操作和 SysV 信号量提供互斥锁与条件变量
  */
 
 

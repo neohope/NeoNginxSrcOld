@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 守护进程化工具函数。
+ * - 通过 fork/setsid 脱离终端并创建新会话
+ * - 将 stdin/stdout（可选 stderr）重定向到 /dev/null
+ * - 配合 master 进程模式使 nginx 在后台稳定运行
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

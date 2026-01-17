@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * UNIX 平台子进程创建和管理。
+ * - 封装 fork() 与进程间通信用的本地 socketpair 渠道
+ * - 维护 ngx_processes 表，记录 worker/cache manager 等子进程信息
+ * - 提供 spawn/respawn/execute 等接口供 master 进程使用
  */
 
 

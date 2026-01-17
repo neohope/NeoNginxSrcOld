@@ -1,7 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Unix 平台发送数据封装。
+ * 实现了 ngx_unix_send，对 send 系统调用进行包装，
+ * 集成 kqueue 错误检查，并正确处理非阻塞 socket 的发送返回值和错误码。
  */
+
 
 
 #include <ngx_config.h>

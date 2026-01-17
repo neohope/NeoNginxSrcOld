@@ -1,9 +1,4 @@
 
-/*
- * Copyright (C) Igor Sysoev
- */
-
-
 #ifndef _NGX_CHANNEL_H_INCLUDED_
 #define _NGX_CHANNEL_H_INCLUDED_
 

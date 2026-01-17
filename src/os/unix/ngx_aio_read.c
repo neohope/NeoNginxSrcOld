@@ -1,7 +1,10 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * AIO 单次异步读实现。
+ * - 为连接的读事件填充 aiocb 并调用 aio_read 提交请求
+ * - 通过 aio_error/aio_return 取得完成状态与实际读取字节数
+ * - 可配合 kqueue 把完成通知集成到 nginx 事件循环中
  */
+
 
 
 #include <ngx_config.h>

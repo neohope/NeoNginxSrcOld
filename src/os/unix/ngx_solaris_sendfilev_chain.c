@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Solaris 平台 sendfilev 链式发送实现。
+ * - 使用 sendfilev 将内存缓冲和文件数据组成向量一次发送
+ * - 合并相邻缓冲区，限制单次发送大小在 limit 之内
+ * - 处理 EINTR/EAGAIN 并递增连接已发送数据量
  */
 
 

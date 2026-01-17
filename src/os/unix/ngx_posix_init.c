@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * 通用 POSIX 平台初始化与信号处理。
+ * - 根据编译选项填充 ngx_os_io 中的 POSIX IO 实现
+ * - 调用 ngx_posix_init 设置进程资源限制、CPU 数等基础参数
+ * - 定义 master 进程用到的各种信号及其统一入口处理函数
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

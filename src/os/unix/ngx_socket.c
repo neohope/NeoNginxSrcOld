@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Unix Socket 辅助工具函数。
+ * 实现了设置 socket 阻塞/非阻塞模式 (ioctl/fcntl 兼容处理)
+ * 和 TCP_NOPUSH (FreeBSD) / TCP_CORK (Linux) 选项的封装。
  */
 
 

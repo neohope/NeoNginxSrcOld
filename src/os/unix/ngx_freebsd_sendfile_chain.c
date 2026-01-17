@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * FreeBSD 平台 sendfile 链式发送实现。
+ * - 利用 sendfile + TCP_NOPUSH 发送“头+文件+尾部”数据
+ * - 合并内存缓冲和文件块，尽量按整包发送减少碎片
+ * - 针对旧内核的 nbytes bug 和 5 秒延迟做兼容处理
  */
 
 

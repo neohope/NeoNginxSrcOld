@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * AIO 异步写链封装。
+ * - 将链表中的可写数据合并成一次 aio_write 提交
+ * - 通过 limit 限制本次写出的最大字节数
+ * - 根据返回值推进各缓冲区 pos 并累加连接发送量
  */
 
 

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * 进程间 channel 通信封装。
+ * - 基于本地 socket 发送/接收 ngx_channel_t 控制消息
+ * - 在支持 SCM_RIGHTS 的系统上传递文件描述符共享监听 fd
+ * - 提供辅助函数将 channel fd 挂入事件循环并在退出时关闭
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

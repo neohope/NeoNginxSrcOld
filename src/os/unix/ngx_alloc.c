@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * UNIX 平台通用内存分配封装。
+ * - 对 malloc/posix_memalign/memalign 做简单包装并统一日志输出
+ * - 提供 ngx_alloc/ngx_calloc/ngx_memalign 供核心模块使用
+ * - 通过 ngx_pagesize 等全局变量配合平台特性做对齐
  */
 
 

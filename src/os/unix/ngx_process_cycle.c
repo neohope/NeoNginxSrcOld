@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * UNIX 平台 master/worker 进程主循环。
+ * - master 进程负责 fork 多个 worker 并通过 channel 发送控制指令
+ * - 处理重新加载配置、平滑重启、优雅退出等信号
+ * - worker 进程在自身循环中驱动事件模块并处理网络请求
  */
 
 

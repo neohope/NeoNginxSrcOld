@@ -1,7 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Unix 平台链式写入 (Gather Write) 实现。
+ * 使用 writev 系统调用将多个不连续的缓冲区数据一次性发送，
+ * 减少系统调用次数，是普通 socket 发送的核心函数。
  */
+
 
 
 #include <ngx_config.h>

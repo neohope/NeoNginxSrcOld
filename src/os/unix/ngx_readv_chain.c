@@ -1,8 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Unix 平台链式读取 (Scatter Read) 实现。
+ * 使用 readv 系统调用将数据一次性读取到多个不连续的缓冲区 (iovec) 中，
+ * 减少系统调用次数，并处理 kqueue 事件状态。
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

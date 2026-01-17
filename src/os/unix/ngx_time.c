@@ -1,7 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Unix 时间处理函数。
+ * 封装了 ngx_localtime (localtime_r 的线程安全封装) 等时间转换函数，
+ * 确保在多线程或信号处理上下文中的安全性。
  */
+
 
 
 #include <ngx_config.h>

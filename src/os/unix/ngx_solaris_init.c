@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Solaris 平台初始化与 sendfilev 封装。
+ * - 使用 sysinfo 读取系统名、版本等基础信息
+ * - 填充 ngx_os_io，选择 sendfilev 或 writev_chain 作为发送接口
+ * - 最终调用 ngx_posix_init 完成通用 POSIX 初始化
  */
 
 

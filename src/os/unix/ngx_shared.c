@@ -1,8 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Unix 共享内存创建封装。
+ * 根据平台特性选择 mmap(MAP_ANON) 或 mmap(/dev/zero) 方式创建匿名共享内存，
+ * 供 Nginx 多进程间共享数据 (如 cache、统计信息)。
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

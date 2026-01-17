@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * UNIX 平台错误字符串封装。
+ * - 对不同实现的 strerror_r 进行统一封装
+ * - 返回实际拷贝到 errstr 中的错误信息长度
+ * - 供日志子系统将 errno 转换为可读字符串
  */
 
 

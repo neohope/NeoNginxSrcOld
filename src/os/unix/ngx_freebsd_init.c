@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * FreeBSD 平台初始化与 sendfile 封装。
+ * - 通过 sysctl 读取内核/CPU/TCP sendspace 等系统参数
+ * - 按 FreeBSD 版本选择是否启用 TCP_NOPUSH、零拷贝 sendfile
+ * - 填充 ngx_os_io，使上层统一通过抽象 IO 接口访问
  */
 
 
