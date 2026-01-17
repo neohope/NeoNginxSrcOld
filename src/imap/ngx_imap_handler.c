@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * IMAP/POP3 会话处理模块。
+ * - 接受新连接后发送协议问候语（greeting），区分 POP3/IMAP
+ * - 初始化 ngx_imap_session_t，读取并解析客户端命令
+ * - 维护简单的认证状态机，目前主要实现 POP3 认证流程
  */
 
 

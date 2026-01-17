@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * IMAP/POP3 上游代理模块。
+ * - 为前端 IMAP/POP3 会话建立到后端邮件服务器的 upstream 连接
+ * - 负责认证阶段的请求/响应转发与简单错误处理
+ * - 通过 ngx_event_connect_peer 复用通用 upstream 连接管理逻辑
  */
 
 

@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * IMAP 子系统入口与 imap 模块。
+ * - 定义 imap {} 主配置块，创建 IMAP 监听端口
+ * - 为 8110 等端口设置监听 socket 属性与连接处理回调
+ * - 作为整个 IMAP 协议处理的入口，与 ngx_imap_handler 等协作
  */
 
 

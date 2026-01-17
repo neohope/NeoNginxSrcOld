@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * IMAP/POP3 命令解析模块。
+ * - 使用状态机解析 POP3 命令行以及后续参数
+ * - 识别 USER/PASS/QUIT 等指令并填充到会话结构中
+ * - 在格式错误时返回 NGX_IMAP_PARSE_INVALID_COMMAND
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>
