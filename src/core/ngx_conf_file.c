@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 配置文件解析与指令分发。
+ * - 实现通用配置解析框架（读取 token、匹配模块指令）
+ * - 支持 include 指令及多级配置块（如 http/server/location）
+ * - 根据指令元信息调用各模块的配置处理回调
  */
 
 

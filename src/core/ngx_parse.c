@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 通用配置值解析工具。
+ * - ngx_parse_size: 解析带 K/M 后缀的容量（如 10k、2M）
+ * - ngx_parse_time: 解析带单位的时间串（如 1h 30m、10s、200ms）
+ * - 返回统一的整数值，供缓存、超时等配置使用
  */
 
 

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 红黑树容器。
+ * - 实现插入/删除/旋转等平衡操作，保持近似完全平衡
+ * - 按 key 有序存储，支持快速查找与区间遍历
+ * - 被用作多种索引结构的基础（如 timer、共享内存索引等）
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

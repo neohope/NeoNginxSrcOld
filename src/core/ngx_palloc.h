@@ -1,9 +1,4 @@
 
-/*
- * Copyright (C) Igor Sysoev
- */
-
-
 #ifndef _NGX_PALLOC_H_INCLUDED_
 #define _NGX_PALLOC_H_INCLUDED_
 

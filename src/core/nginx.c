@@ -1,8 +1,10 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 0.1.0 主程序入口与核心配置模块。
+ * - 定义 core 模块指令（如 daemon、worker_processes 等）
+ * - 解析命令行参数和配置文件，构造 ngx_cycle
+ * - 根据配置初始化操作系统相关环境和所有模块
+ * - 决定运行模式（单进程/多进程 master-worker）
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

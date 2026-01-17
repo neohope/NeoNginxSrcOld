@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 输出链（output chain）框架。
+ * - 把上游模块产生的缓冲链整理成适合底层发送的形式
+ * - 根据 sendfile/内存等条件决定是否拷贝到临时缓冲区
+ * - 复用缓冲区并维护 free/busy 链，降低系统调用与内存分配
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

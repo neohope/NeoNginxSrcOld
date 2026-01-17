@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 日志子系统与 error_log 模块。
+ * - 提供统一的错误/调试日志输出接口（ngx_log_error_core 等）
+ * - 支持多级日志级别与按模块细分的 debug 级别
+ * - 通过 error_log 指令配置日志文件、级别和自定义 handler
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

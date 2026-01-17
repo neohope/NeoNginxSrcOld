@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 缓冲区与缓冲链管理。
+ * - 提供创建临时内存缓冲区的便捷接口
+ * - 构造 ngx_chain_t 链表，用于高效的数据发送链路
+ * - 维护 free/busy 链，复用缓冲区，减少内存分配次数
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 临时文件与路径管理。
+ * - 生成带有多级哈希目录的临时文件名（防止单目录过多文件）
+ * - 创建/写入临时文件，支持持久化或自动删除
+ * - 解析配置中的 path 指令，初始化缓存等模块使用的路径结构
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

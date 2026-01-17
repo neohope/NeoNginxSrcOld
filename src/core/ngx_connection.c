@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 连接与监听套接字管理。
+ * - 抽象 ngx_connection_t/ngx_listening_t 等连接结构
+ * - 创建/继承/打开监听端口，填充地址文本信息
+ * - 配合事件模块完成非阻塞网络 IO 的基础工作
  */
 
 

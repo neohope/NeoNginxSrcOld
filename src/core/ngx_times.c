@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 时间缓存与格式化。
+ * - 维护全局的当前时间、启动时间和耗时毫秒数
+ * - 预先生成多种常用时间字符串，减少频繁格式化开销
+ * - 在线程模式下通过多 slot 与互斥锁避免读写竞争
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

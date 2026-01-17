@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 内存池（pool）分配器。
+ * - 把大块内存切分成小块，减少频繁 malloc/free
+ * - 小块从 pool 链中顺序分配，大块通过 large 链单独管理
+ * - 请求/连接生命周期结束时一次性释放整个 pool
  */
 
 

@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 自旋锁实现。
+ * - 基于原子操作 ngx_atomic_cmp_set 构造简单自旋锁
+ * - 在多 CPU 上先自旋一段时间，随后主动让出调度
+ * - 在线程场景下保护全局或共享数据结构
  */
 
 

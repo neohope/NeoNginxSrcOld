@@ -1,9 +1,4 @@
 
-/*
- * Copyright (C) Igor Sysoev
- */
-
-
 #ifndef _NGINX_H_INCLUDED_
 #define _NGINX_H_INCLUDED_
 

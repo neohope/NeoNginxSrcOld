@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 运行周期（cycle）管理。
+ * - 描述一次完整配置装载后的运行环境 ngx_cycle_t
+ * - 支持平滑重启：维护旧 cycle 列表并定期清理
+ * - 为各个 core 模块创建/初始化配置，并重新打开监听端口和日志文件
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

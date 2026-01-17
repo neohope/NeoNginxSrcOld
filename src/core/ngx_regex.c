@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 对 PCRE 正则库的封装。
+ * - 把 PCRE 的 malloc/free 重定向到当前请求的内存池
+ * - 提供 ngx_regex_compile/ngx_regex_exec 统一接口
+ * - 在多线程场景下，通过 TLS 保存当前使用的内存池
  */
 
 

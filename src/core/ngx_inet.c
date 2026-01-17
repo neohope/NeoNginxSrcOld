@@ -1,9 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx IPv4 文本/二进制地址转换工具。
+ * - 实现 ngx_sock_ntop/ngx_inet_ntop 等函数
+ * - 将 sockaddr 或原始字节序列格式化为点分十进制字符串
+ * - 仅支持 AF_INET，用于监听地址和日志输出
  */
-
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>
