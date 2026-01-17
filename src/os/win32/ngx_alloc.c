@@ -1,8 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Nginx 内存分配函数的 Windows 实现。
+ * 包含 ngx_alloc (malloc 封装) 和 ngx_calloc (分配并清零) 函数，
+ * 提供基本的内存管理并集成了日志记录功能。
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

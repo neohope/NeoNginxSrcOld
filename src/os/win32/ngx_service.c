@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows 服务集成模块。
+ * 实现了将 Nginx 注册为 Windows 服务的功能，包含服务入口点 (service_main)
+ * 和控制处理程序，允许 Nginx 在后台作为系统服务运行。
  */
 
 

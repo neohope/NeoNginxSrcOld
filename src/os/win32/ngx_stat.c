@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows 文件状态查询。
+ * 实现了获取文件属性 (GetFileAttributes) 的封装，
+ * 用于检查文件是否存在及获取文件元数据。
  */
 
 

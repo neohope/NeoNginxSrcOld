@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows 时间获取函数。
+ * 实现了 ngx_gettimeofday (获取精确时间，基于 FILETIME 转换) 和
+ * ngx_gettimezone (获取时区信息) 函数，解决了 Windows Epoch 与 Unix Epoch 的差异。
  */
 
 

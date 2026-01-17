@@ -1,9 +1,4 @@
 
-/*
- * Copyright (C) Igor Sysoev
- */
-
-
 #ifndef _NGX_WIN32_CONFIG_H_INCLUDED_
 #define _NGX_WIN32_CONFIG_H_INCLUDED_
 

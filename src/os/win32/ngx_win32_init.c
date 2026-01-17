@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows 平台初始化。
+ * 获取操作系统版本、CPU 数量、页大小等系统信息，并初始化 Winsock 库
+ * (WSAStartup) 和加载扩展函数 (AcceptEx, TransmitFile)。
  */
 
 

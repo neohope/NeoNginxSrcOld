@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows Socket 链式发送数据。
+ * 使用 WSASend 实现分散/聚集 I/O，将 ngx_chain_t 链表中的多个缓冲区
+ * 一次性发送，并处理了 WSABUF 的对齐要求。
  */
 
 

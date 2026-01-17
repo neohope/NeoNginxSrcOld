@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows Socket 链式接收数据。
+ * 使用 WSARecv 实现分散/聚集 I/O (Scatter/Gather I/O)，
+ * 将接收到的数据直接填充到 ngx_chain_t 链表中，提高内存使用效率。
  */
 
 

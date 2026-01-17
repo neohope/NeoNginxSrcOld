@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows Socket 接收数据实现。
+ * 封装了 WSARecv 函数，用于从连接中读取数据，
+ * 处理了 WSAEWOULDBLOCK 等 Windows 特定的 Socket 错误。
  */
 
 

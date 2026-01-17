@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows 进程循环控制。
+ * 实现了单进程模式 (ngx_single_process_cycle)，因为早期 Windows 版本
+ * 不支持 master/worker 多进程模式。处理进程退出和信号模拟。
  */
 
 

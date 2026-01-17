@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows 文件操作封装。
+ * 实现了文件读写 (ngx_read_file)、文件重命名 (ngx_win32_rename_file) 等功能，
+ * 处理了 Windows 平台特定的文件句柄和偏移量操作 (如 FAT32 大文件支持)。
  */
 
 

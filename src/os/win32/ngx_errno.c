@@ -1,8 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows 错误处理模块。
+ * 主要包含 WSA (Windows Socket API) 错误码到字符串的映射表，
+ * 用于将 Windows 系统错误码转换为可读的错误信息。
  */
-
 
 /*
  * TODO:

@@ -1,6 +1,7 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * Windows Socket 辅助函数。
+ * 实现了设置 Socket 阻塞/非阻塞模式的函数 (ngx_nonblocking, ngx_blocking)，
+ * 是对 ioctlsocket 的封装。
  */
 
 
