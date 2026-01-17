@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 304 Not Modified 过滤模块。
+ * - 比较 If-Modified-Since 与响应 last_modified_time
+ * - 命中时将 200 改写为 304，去掉 Content-Type/Content-Length 等实体头
+ * - 挂在 header filter 链路最前端，尽早拦截返回
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

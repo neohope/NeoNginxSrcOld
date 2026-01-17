@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 反向代理上游响应解析。
+ * - 使用有限状态机解析上游返回的状态行和响应头
+ * - 提取 HTTP 版本、状态码以及状态文本等关键信息
+ * - 在格式错误时返回 NGX_HTTP_PROXY_PARSE_NO_HEADER 供上层处理
  */
 
 

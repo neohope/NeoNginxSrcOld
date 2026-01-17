@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP SSL 配置模块。
+ * - 提供 ssl、ssl_certificate、ssl_certificate_key 等指令
+ * - 在 srv 级别创建/合并 SSL 配置并初始化 OpenSSL 上下文
+ * - 为后续 HTTPS 监听端口提供证书及私钥等基础能力
  */
 
 

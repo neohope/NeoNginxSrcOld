@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 特殊错误页与内部重定向响应。
+ * - 内置 3xx/4xx/5xx 常见状态码的简单 HTML 错误页面
+ * - special_response_handler 按错误码选择页面并输出响应体
+ * - 针对旧版 MSIE 追加 padding，避免其“友好错误页面”覆盖内容
  */
 
 

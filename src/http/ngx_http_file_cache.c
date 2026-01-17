@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 文件缓存工具函数。
+ * - 根据请求 key 计算 MD5，并生成对应缓存文件路径
+ * - 读取并校验缓存文件头，判断是否命中、过期或发生 md5 冲突
+ * - 被垃圾回收器用来检查缓存文件是否仍然有效，决定是否删除
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

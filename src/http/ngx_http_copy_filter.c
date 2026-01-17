@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP copy 输出过滤模块。
+ * - 使用 ngx_output_chain 统一处理 sendfile/memory/临时缓冲区输出
+ * - 通过 output_buffers 指令控制发送链表使用的缓冲区大小和数量
+ * - 挂在 body filter 顶部，作为多数响应体过滤模块的基础
  */
 
 

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 反向代理上游通信实现。
+ * - 构造发送给上游的 HTTP 请求行和请求头
+ * - 负责连接上游、收发数据，并解析上游返回的状态行和头部
+ * - 在失败时根据重试策略选择 next upstream，最终回写给客户端
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

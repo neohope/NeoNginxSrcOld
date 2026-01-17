@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 反向代理缓存处理。
+ * - 根据请求 URI/args 生成缓存 key，并查询本地缓存文件
+ * - 处理缓存命中、过期、失效等多种状态，更新统计信息
+ * - 视情况直接返回缓存内容或继续向上游发起请求
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

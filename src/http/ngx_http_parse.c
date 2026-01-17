@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 请求行和头部解析。
+ * - 通过有限状态机解析方法、URI、协议版本等字段
+ * - 提取 Host/端口等信息，填充到 ngx_http_request_t 对应位置
+ * - 出错时返回 NGX_HTTP_PARSE_xxx，供上层请求处理逻辑判定
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

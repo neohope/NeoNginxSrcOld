@@ -1,7 +1,10 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 时间字符串解析。
+ * - 支持 RFC822、RFC850、ISO C 三种常见 HTTP 日期格式
+ * - 将形如 "Tue, 10 Dec 2002 23:50:13 GMT" 转为 time_t
+ * - 主要用于 If-Modified-Since、Expires 等头部的时间比较
  */
+
 
 
 #include <ngx_config.h>

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 访问日志处理模块。
+ * - 提供 log_format、access_log 指令，支持自定义格式与多日志文件
+ * - 将请求信息按格式串行化成一行字符串并写入目标文件
+ * - 通过可扩展的变量操作（ops）体系支持引用请求/响应头等字段
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

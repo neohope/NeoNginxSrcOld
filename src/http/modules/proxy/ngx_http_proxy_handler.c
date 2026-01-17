@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 反向代理主处理模块。
+ * - 定义 proxy_* 系列配置指令和 location 级配置结构
+ * - 负责将客户端请求转发到上游 upstream，并处理响应/错误重试
+ * - 结合文件缓存、busy_lock 等机制控制后端负载和缓存策略
  */
 
 

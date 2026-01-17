@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP write 写出过滤模块。
+ * - 缓冲聚合上游 body filter 产生的链表，控制实际 send_chain 调用时机
+ * - 根据 postpone_output/limit_rate 等配置决定是否推迟发送或限速
+ * - 作为最后一个 body filter，把数据真正写入 socket
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

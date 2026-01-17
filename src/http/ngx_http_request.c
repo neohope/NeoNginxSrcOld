@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 请求处理主流程。
+ * - 从连接上初始化 ngx_http_request_t 并解析请求行、请求头
+ * - 构建 location 匹配结果并调用各阶段处理函数/过滤器
+ * - 处理 keepalive、lingering close、错误响应与请求体丢弃等细节
  */
 
 

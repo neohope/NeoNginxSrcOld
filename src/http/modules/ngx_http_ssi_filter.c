@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP SSI 过滤模块。
+ * - 解析 HTML 中的 <!--#echo ...--> 等 SSI 指令并动态替换内容
+ * - 为实现方便，将响应缓存到内存中并在过滤链中做字符串扫描
+ * - 仅在开启 ssi 指令且 content-type 为 text/html 时生效
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

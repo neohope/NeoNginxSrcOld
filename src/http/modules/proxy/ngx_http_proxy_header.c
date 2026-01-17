@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 反向代理响应头复制与重写。
+ * - 从上游 headers_in 拷贝需要透传给客户端的头部
+ * - 忽略或特别处理 Connection、Server、Location 等敏感头
+ * - 支持根据 proxy_pass 配置重写 Location 以保持前端 URL 一致
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

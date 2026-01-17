@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP headers 过滤模块（主要实现 expires 指令）。
+ * - 根据配置为 200 响应自动添加 Expires/Cache-Control 头
+ * - 支持绝对时间（epoch）、相对时间（max-age）和关闭缓存等模式
+ * - 作为 header filter 参与输出头部的最终组装
  */
 
 

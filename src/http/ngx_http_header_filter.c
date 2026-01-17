@@ -1,7 +1,10 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 响应头构造过滤模块。
+ * - 根据 r->headers_out 拼装状态行和标准 HTTP 头字符串
+ * - 处理 Server/Date/Content-Length/Location 等通用头输出
+ * - 作为 header filter 链末端，将头部缓冲区挂入输出链
  */
+
 
 
 #include <ngx_config.h>

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP access 访问控制模块（基于 IP）。
+ * - 实现 allow/deny 指令，支持单 IP、CIDR 和 all 三种匹配方式
+ * - 在请求阶段根据客户端地址匹配规则，决定允许或返回 403
+ * - 目前仅支持 AF_INET（IPv4） 套接字
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

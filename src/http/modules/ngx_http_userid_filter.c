@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP userid 过滤模块。
+ * - 通过 Set-Cookie 生成/回写用户标识，用于日志及业务统计
+ * - 支持 off/log/v1/on 等多种工作模式与 P3P 相关配置
+ * - 作为 header filter 链中的一环，与其它过滤模块串联工作
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

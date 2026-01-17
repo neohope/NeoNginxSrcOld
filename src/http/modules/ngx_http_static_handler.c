@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 静态文件处理模块。
+ * - 根据 root/alias 生成文件系统路径并打开文件
+ * - 支持 open files cache 与 redirect_cache 提升文件访问性能
+ * - 只处理 GET/HEAD 请求，其余方法返回 405
  */
 
 

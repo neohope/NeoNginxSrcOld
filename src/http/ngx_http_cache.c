@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 内存级缓存子系统。
+ * - 提供简单的 key/value 哈希缓存，用于加速反向代理等场景
+ * - 通过 refs/expired/updated 字段维护缓存项的生命周期
+ * - 使用互斥锁保护多 worker 间的并发访问
  */
 
 

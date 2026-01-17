@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP index 索引文件处理模块。
+ * - 根据 index 指令配置的文件名尝试打开目录下的默认首页
+ * - 在需要时使用 index_cache 缓存重定向结果以减少磁盘访问
+ * - 支持 root/alias 等多种路径组合场景
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

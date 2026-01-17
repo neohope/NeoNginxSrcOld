@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP Range 范围请求过滤模块。
+ * - 解析 Range/If-Range 请求头，支持单段与多段字节范围
+ * - 根据范围切分响应体并生成 206/Content-Range/multipart 边界等头部
+ * - 在输出链路中拦截响应，实现断点续传和多段下载
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

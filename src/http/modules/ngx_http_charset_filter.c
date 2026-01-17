@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 字符集转换过滤模块。
+ * - 通过 charset_map 定义服务端/客户端字符集之间的映射表
+ * - 根据 default_charset/source_charset 决定是否对响应体做转码
+ * - 只作用于 text/* 和部分脚本类型，并在 header/body filter 中生效
  */
 
 

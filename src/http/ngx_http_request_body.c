@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 请求体读取模块。
+ * - 处理请求体可能已预读在 header_in 中的部分并挂入 request_body->bufs
+ * - 根据 client_body_buffer_size 决定缓冲或落盘到临时文件
+ * - 通过事件回调异步读取大请求体，读完后调用用户注册的 handler
  */
 
 

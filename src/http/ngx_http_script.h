@@ -1,9 +1,4 @@
 
-/*
- * Copyright (C) Igor Sysoev
- */
-
-
 #ifndef _NGX_HTTP_SCRIPT_H_INCLUDED_
 #define _NGX_HTTP_SCRIPT_H_INCLUDED_
 

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP Gzip 压缩过滤模块。
+ * - 检查客户端 Accept-Encoding 以及 gzip_proxied 等条件是否允许压缩
+ * - 使用 zlib 对响应体按块压缩，并维护 CRC/长度等 gzip 尾部信息
+ * - 通过 header/body filter 链路为响应添加 Content-Encoding: gzip 头
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

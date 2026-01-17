@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP rewrite/redirect 处理模块。
+ * - 提供 rewrite、redirect、rewrite_log 等配置指令
+ * - 编译正则规则与重写操作序列，在请求阶段对 URI 做改写
+ * - 支持按规则直接返回指定状态码或继续后续处理
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

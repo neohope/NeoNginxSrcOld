@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP 子系统入口与 http 模块。
+ * - 解析 http { } 主配置块，创建/合并各 HTTP 模块的 main/srv/loc 配置
+ * - 按监听端口、地址和 server_name 构建虚拟主机路由结构
+ * - 维护全局统计与顶层 header/body filter 链表入口
  */
 
 

@@ -1,8 +1,9 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP core 模块。
+ * - 定义 server/location 等核心指令以及大部分 HTTP 基础配置
+ * - 构建请求处理阶段表，驱动整个 HTTP phase 流程
+ * - 负责 URI/location 匹配、监听地址与虚拟主机管理
  */
-
 
 #include <ngx_config.h>
 #include <ngx_core.h>

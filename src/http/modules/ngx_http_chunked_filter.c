@@ -1,6 +1,8 @@
-
 /*
- * Copyright (C) Igor Sysoev
+ * HTTP chunked 编码过滤模块。
+ * - 在 HTTP/1.1 且长度未知时，为响应体添加 chunked 分块编码
+ * - 计算每个输出块的十六进制长度，并追加 CRLF/终止块
+ * - 通过 header/body filter 链挂接到顶层输出过滤链
  */
 
 
